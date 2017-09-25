@@ -16,7 +16,7 @@ function has23(x) {
 
 //fix_23
 function fix23(x){
-    for(i = 0; i < 2; i++) {
+    for(var i = 0; i < 2; i++) {
         if (x[i] == 2 && x[i + 1] == 3) {
             x[i + 1] = 0;
         }
@@ -28,7 +28,7 @@ function fix23(x){
 function countYZ(str) {
     var result = 0;
     var x = str.toLowerCase();
-    for (i = 0; i < x.length; i++) {
+    for (var i = 0; i < x.length; i++) {
         if (x[i] == "y" && x[i + 1] == " ") {
             result++;
         }
@@ -61,9 +61,9 @@ function endOther(str1, str2){
 function starOut(str) {
     var res = str;
     var x = 0;
-    for (i = 0; i < res.length; i++) {
+    for (var i = 0; i < res.length; i++) {
         if (res[i] == "*") {
-            for (j = 1; j < 3; j++)
+            for (var j = 1; j < 3; j++)
                 if (res[i + j] == "*") {
                     x++;
                 } else {
@@ -93,13 +93,13 @@ function canBalance(x){
     var result = false;
     var sum = 0;
     var sum1 = 0;
-    for(i = 0; i < x.length; i++){
+    for(var i = 0; i < x.length; i++){
         sum += x[i];
     }
     var sum2 = sum;
-    for(i = 0; i < x.length; i++){
-        sum1 += x[i];
-        sum2 -= x[i];
+    for(var j = 0; j < x.length; j++){
+        sum1 += x[j];
+        sum2 -= x[j];
         if(sum1 == sum2){
             result = true;
             break;
@@ -112,7 +112,7 @@ function canBalance(x){
 function countClumps(x){
     var num = 0;
     var check = null;
-    for(i = 0; i < x.length; i++){
+    for(var i = 0; i < x.length; i++){
         if(x[i] != check){
             if(x[i] == x[i + 1]) {
                 num++;
