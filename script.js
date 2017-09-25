@@ -134,6 +134,7 @@ function evenlySpaced(a, b, c){
     return(dif1 == dif2);
 }
 
+
 //tester
 function tester() {
     document.getElementById("output").innerHTML += firstLast6([1, 2, 6]);
